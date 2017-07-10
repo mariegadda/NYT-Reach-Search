@@ -1,0 +1,20 @@
+{
+  "name": "nyt-react-search",
+  "version": "1.0.0",
+  "description": "React Application for searching the New York Times",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariegadda/NYT-Reach-Search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariegadda/NYT-Reach-Search/issues"
+  },
+  "homepage": "https://github.com/mariegadda/NYT-Reach-Search#readme"
+}
