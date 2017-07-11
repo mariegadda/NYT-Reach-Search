@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/mariegadda/NYT-Reach-Search/issues"
   },
-  "homepage": "https://github.com/mariegadda/NYT-Reach-Search#readme"
+  "homepage": "https://github.com/mariegadda/NYT-Reach-Search#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "mongoose": "^4.11.1",
+    "morgan": "^1.8.2"
+  }
 }
