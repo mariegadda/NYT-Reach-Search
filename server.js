@@ -34,6 +34,9 @@ db.on("error", function(err) {
 db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
+// ==========================Routes==================================
+
+
 
 //===========================start server============================
 
