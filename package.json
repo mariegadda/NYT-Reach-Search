@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mariegadda/NYT-Reach-Search#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "body-parser": "^1.17.2",

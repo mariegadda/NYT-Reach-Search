@@ -12,6 +12,29 @@ var Form = React.createClass({
     };
   },
 
+ // This function will respond to the user input
+  handleChange: function (event) {
+
+    // capture query input
+
+    var newState = {}
+    newState[event.target.id] = event.target.value;
+    this.setState(newState);
+
+    console.log(newState)
+
+  },
+
+ handleSubmit: function (event) {
+    // prevent the HTML from trying to submit a form if the user hits "Enter" instead of
+    // clicking the button
+    event.preventDefault();
+
+    // Set the parent to have the search term
+    this.props.setTerm(this.state.term, this.state.startYr, this.state.endYr);
+
+  },
+  
 render: function () {
     return (
 

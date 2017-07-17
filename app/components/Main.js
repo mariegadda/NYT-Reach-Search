@@ -2,7 +2,9 @@
 var React = require("react");
 //var axios = require('axios');
 var Form = require("./children/Form")
-
+var Results = require("./children/Results");
+// Helper for making AJAX requests to our API
+var helpers = require("./utils/helpers");
 var Main = React.createClass({
 
 	getInitialState: function () {
@@ -14,8 +16,32 @@ var Main = React.createClass({
 		};
 	},
 
+
+  // If the component changes (i.e. if a search is entered)...
+  componentDidUpdate: function () {
+    // Run the query for the Articles
+    helpers.runQuery(this.state.topic, this.state.startYr, this.state.endYr).then(function (data) {
+      if (data !== this.state.results) {
+        console.log("Articles", data);
+
+
+        this.setState({ results: data });
+
+      }
+    }.bind(this));
+  },
+
+ // This function allows childrens to update the parent.
+  setTerm: function (topic, startYr, endYr) {
+    this.setState({
+      topic: topic,
+      startYr: startYr,
+      endYr: endYr
+    });
+  },
 render: function () {
     return (
+    <div>	
       <div className="container">
         <div className="row">
           
@@ -35,6 +61,18 @@ render: function () {
         </div>
      </div>
 
+     <div className="container">
+     	<div className="row">
+               <h3>Search Results</h3>
+         
+
+                {/* RESULTS - SECOND PAGE */}
+
+                <Results results={this.state.results} saveArticle={this.saveArticle} />
+              </div>
+            </div>
+      </div>
+        
 
        	
     );
@@ -44,4 +82,5 @@ render: function () {
 //close the createClass
 });
 
-module.exports = Main;
+module.exports = Main
+
