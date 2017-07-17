@@ -64,10 +64,7 @@ render: function () {
      <div className="container">
      	<div className="row">
                <h3>Search Results</h3>
-         
-
-                {/* RESULTS - SECOND PAGE */}
-
+           
                 <Results results={this.state.results} saveArticle={this.saveArticle} />
               </div>
             </div>

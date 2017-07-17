@@ -42,7 +42,7 @@ var Results = React.createClass({
               <p>URL: {result.web_url}</p>
               <p> Date: {result.pub_date}</p>
               <button key={result._id} onClick={boundClick}> save </button>
-              <p> _________________________________</p>
+              <hr/>
             </div>
           )
         }.bind(this)
